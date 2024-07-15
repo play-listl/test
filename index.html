@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listl</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Analytics Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P006HTP81M"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-P006HTP81M');
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>listl</h1>
+        </div>
+        <div class="buttons">
+            <button id="scoring-btn" class="scoring-btn">How Scoring Works</button>
+        </div>
+    </header>
+    <main>
+        <div id="quiz">
+            <p id="instructions" class="instructions">
+                Arrange the following planets from shortest average distance to the sun (at the top of the list) to the longest average distance (at the bottom of the list).</p>
+            <ul id="answers"></ul>
+            <button id="submit-btn" class="submit-btn">Submit</button>
+            <button id="share-btn" class="share-btn disabled">Share Results</button>
+            <p id="score" class="score"></p>
+        </div>
+        <div id="scoring-modal" class="modal">
+            <div class="modal-content">
+                <span id="close-scoring-modal" class="close">&times;</span>
+                <h2>Scoring Details</h2>
+                <ul>
+                    <li>After clicking submit you will see your answers followed by the correct answers and values in brackets for each of the 8 positions in the list.</li>
+                    <li>A score for each row is given depending on how close you are to the correct answer e.g. 9/12 means you received 9 points out of a possible 12 points for that answer.</li>
+                    <li>Maximum possible points for each answer decrease with each row from the top down and range from 20 (top), 16, 14, 12, 11, 10, 9, 8 (bottom).</li>
+                    <li>Correct answers are highlighted in green and incorrect answers are highlighted in red.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

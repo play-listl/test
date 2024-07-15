@@ -1,0 +1,177 @@
+/* Reset default styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden; /* Prevent vertical scrolling */
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px; /* Reduced padding for mobile view */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Adjusted font size for better fit */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.scoring-btn {
+    font-size: 0.8rem; /* Adjusted font size for better fit */
+    background-color: #ffc107;
+    color: #000;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scoring-btn:hover {
+    background-color: #ffca28;
+}
+
+/* Main content styles */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust height to fit within viewport */
+    background-color: #f0f0f0;
+    padding: 10px; /* Added padding for spacing */
+}
+
+#quiz {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Reduced padding for mobile view */
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+#instructions {
+    font-size: 1rem; /* Adjusted font size for better fit */
+    margin-bottom: 20px; /* Reduced margin for mobile view */
+}
+
+#answers {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0; /* Reduced margin for mobile view */
+}
+
+#answers li {
+    background-color: rgba(200, 200, 200, 0.8); /* Greyish background with slight opacity */
+    color: #000; /* Black text color */
+    font-size: 1rem; /* Adjusted font size for better fit */
+    padding: 10px 15px; /* Reduced padding for mobile view */
+    margin: 10px 0; /* Adjusted margin for mobile view */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#answers li:hover {
+    transform: translateY(-3px);
+    background-color: rgba(200, 200, 200, 1); /* Fully opaque on hover */
+}
+
+#answers li.dragging {
+    opacity: 0.7;
+    background-color: rgba(200, 200, 200, 0.5); /* More transparent when dragging */
+}
+
+#answers li.correct {
+    background-color: rgba(40, 167, 69, 0.8); /* Green background for correct answers with slight opacity */
+}
+
+#answers li.incorrect {
+    background-color: rgba(220, 53, 69, 0.8); /* Red background for incorrect answers with slight opacity */
+}
+
+/* Button styles */
+button {
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1rem; /* Adjusted font size for better fit */
+    padding: 10px 20px; /* Reduced padding for mobile view */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px; /* Reduced margin for better spacing */
+}
+
+button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Score display styles */
+#score {
+    font-size: 1.5rem; /* Adjusted font size for better fit */
+    font-weight: bold;
+    margin-top: 20px; /* Reduced margin for mobile view */
+    color: #007bff;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Adjusted margin for mobile view */
+    padding: 20px; /* Reduced padding for mobile view */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 700px;
+    text-align: left;
+}
+
+.close {
+    color: #aaa;
+    font-size: 2rem; /* Adjusted font size for better fit */
+    font-weight: bold;
+    position: absolute;
+    top: 10px; /* Adjusted position for mobile view */
+    right: 20px; /* Adjusted position for mobile view */
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+    text-decoration: none;
+}
